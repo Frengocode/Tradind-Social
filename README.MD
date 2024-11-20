@@ -1,4 +1,4 @@
-# scanyp
+## Trading Social App  
 
 [![Open in Visual Studio Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev)
 [![Contributors](https://img.shields.io/badge/contributors-1-brightgreen)](#)
