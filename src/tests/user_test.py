@@ -33,7 +33,6 @@ async def test_create_account():
             f"{BASE_URL}/user-service/api/v1/sign-up/", files=files
         )
 
-        print(response.text)
 
         assert response.status_code == status.HTTP_200_OK
 
