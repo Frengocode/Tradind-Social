@@ -14,6 +14,9 @@ _async_session_maker = sessionmaker(
 )
 
 
+
+
+
 async def get_news_session() -> AsyncSession:
     async with _async_session_maker() as session:
         try:
