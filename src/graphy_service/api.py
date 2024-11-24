@@ -7,10 +7,6 @@ BINANCE_WS_URL = "wss://stream.binance.com:9443/ws/btcusdt@kline_1h"
 
 
 async def connect_to_binance(ws: WebSocket):
-    """
-    Connects to the Binance WebSocket stream and forwards data to the client WebSocket.
-    Reconnects if the Binance WebSocket connection is lost.
-    """
     while True:
         try:
             async with websockets.connect(BINANCE_WS_URL) as binance_ws:
@@ -27,13 +23,12 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     print("Connection open")
 
-    # Запуск передачи данных от Binance WebSocket клиенту
     binance_task = asyncio.create_task(connect_to_binance(websocket))
 
     try:
-        await binance_task  # Ожидание завершения задачи передачи данных
+        await binance_task 
     except WebSocketDisconnect:
         print("Client WebSocket disconnected.")
     finally:
-        binance_task.cancel()  # Завершение задачи при закрытии соединения
+        binance_task.cancel()  
         print("Connection closed")
