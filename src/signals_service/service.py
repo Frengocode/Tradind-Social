@@ -13,12 +13,11 @@ from sqlalchemy import select
 from src.signals_service.models import SignalModel
 from src.signals_service.scheme import SignalResponse, UpdateSignalRequest
 from src.uitils.scheme import SUser
+from src.uitils.uitils import log
 from redis.asyncio import StrictRedis
 import json
 from src.requests.request import GET_USER
 
-log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
 
 MEDIA_ROOT = "media/signals/"
 
