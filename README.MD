@@ -40,29 +40,29 @@ Before proceeding, ensure the following software is installed on your system:
   source venv/bin/activate
 
 
-2. **Install Packs
+2. **Install Packs**
   ```bash
   pip install -r requirements.txt
 
 
-3.**Create Databases
+3.**Create Databases**
 In PostgreSQL, create the following databases:
 
   ## user_database
-  ##view_database
-  ##signals_database
-  ##comment_database
-  ##Configure the Application
-  ##Update all necessary values in the config.py file located in the config/ directory.
+  ## view_database
+  ## signals_database
+  ## comment_database
+  ## Configure the Application
+  ## Update all necessary values in the config.py file located in the config/ directory.
 
 Ensure database connection details are correctly specified for the databases created in the previous step.
 This step is critical—the application won't work without a properly configured config.py.
 
-5.Run the Application
+5.**Run the Application**
 If all configurations are set up correctly, the application should run without issues.
 ```bash  uvicorn app.app:app --reload
 
-6.Testing
+6.**Testing**
 The project includes automated tests to verify its functionality. If you follow the setup process, the application is guaranteed to work as expected.
 
 
