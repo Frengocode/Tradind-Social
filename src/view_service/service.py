@@ -15,7 +15,6 @@ import redis.asyncio as redis
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 
-
 class ViewService:
 
     def __init__(
